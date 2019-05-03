@@ -1,4 +1,7 @@
 import math
+import torch
+from torch import nn
+# https://github.com/yueruchen/sppnet-pytorch/blob/master/spp_layer.py
 
 
 def spatial_pyramid_pool(self, previous_conv, num_sample, previous_conv_size, out_pool_size):
