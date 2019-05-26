@@ -99,5 +99,11 @@ def squeezenet(pretrained=False):
     # print(out.size())
     return net
 
-# if __name__ == '__main__':
-#     squeezenet()
+
+if __name__ == '__main__':
+    from tensorboardX import SummaryWriter
+    model = squeezenet()
+    writer = SummaryWriter(log_dir="./logs/", comment="myresnet")
+    print(torch.version)
+    with writer:
+        writer.add_graph(model, input_to_model=torch.rand(1, 3, 32, 32))
