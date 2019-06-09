@@ -80,8 +80,6 @@ except:
 
 _BOTTLENECK_EXPANSION = 4
 
-_BOTTLENECK_EXPANSION = 4
-
 
 class _ConvBnReLU(nn.Sequential):
     """
